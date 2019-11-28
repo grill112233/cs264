@@ -9,21 +9,19 @@
 <body>
 	<div class="main">
 		<div class="header">
-			<div class="menuheader">
-				<form>
-					<div class="menuheader2">
-						<button onclick="#" class="menu1" href="home.html">หน้าหลัก</button>
+			<div class="menuheader" style="margin-top:10px;">
+					<div class="menuheader2 me">
+						<a class="menu1" href="loadingtohome3.html">หน้าหลัก</a>
 					</div>
-					<div class="menuheader2">
-						<button onclick="#" class="menu1" href="register.html">คำร้องนักศึกษา</button>
+					<div class="menuheader2 me">
+						<a class="menu1" href="register.html">คำร้องนักศึกษา</a>
 					</div>
-					<div class="menuheader2">
-						<button onclick="#" class="menu1" href="#track">ติดตามสถานะ</button>
+					<div class="menuheader2 me">
+						<a class="menu1" href="#track">ติดตามสถานะ</a>
 					</div>
-					<div class="menuheader2">
-						<button onclick="#" class="menu1" href="#payment">ภาระค่าใช้จ่าย</button>
+					<div class="menuheader2 me">
+						<a class="menu1" href="#payment">ภาระค่าใช้จ่าย</a>
 					</div>
-				</form>
 			</div>
 			<div class="header2">
 				<div class="showprofile">
@@ -85,18 +83,21 @@
 					</div>
 				</div>
 				<div class="row" style="margin-top:5px;width:100%;">
+				<form name="myRegis" action="loadingtocamera.html" onsubmit="return validateRegis()" method="post">
 					<div class="col" style="width:20%;">
 						<textarea class="textarea1" name="message" placeholder="เหตุผลที่ยื่นคำร้องเนื่องจาก..."></textarea>
 					</div>
 					<div class="col" style="width:20%;margin-left:30px;">
 						<div style="margin-left:10px;">เบอร์ติดต่อนักศึกษาล่าสุด</div>
-						<input class="phone" name="message" placeholder="เบอร์โทรศัพท์"></input>
+						<input class="phone" name="phone1" placeholder="เบอร์โทรศัพท์"></input>
 						<div style="margin-left:10px;">เบอร์ติดต่อผู้ปกครองล่าสุด</div>
-						<input class="phone" name="message" placeholder="เบอร์โทรศัพท์"></input>
+						<input class="phone" name="phone2" placeholder="เบอร์โทรศัพท์"></input>
 					</div>
-					<form action="loadingtocamera.html">
 						<div class="col" style="width:20%;margin-left:40px;margin-top:50px;">
 							<button class="btnsend">ยืนยันการส่งคำร้อง</button>
+						</div>
+						<div class="col" style="width:20%;margin-left:40px;margin-top:50px;">
+							<div id="alert" class="alertRegis"></div>
 						</div>
 					</form>
 				</div>

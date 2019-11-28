@@ -5,6 +5,7 @@
 <link rel = "icon" href ="css/image/icon.png"> 
 <link rel="stylesheet" href="./css/login.css">
 <script src="js/login.js"></script>
+<script src="js/data.js"></script>
 <body>
 	<div class="mainlogin">
 	
@@ -37,10 +38,12 @@
 				
 				<div id="loginUser" class="tabcontent">
 					<div class="loginContrainer">
-						<form action="loadingtohome.html">
+						<div id="alert" class="alertLogin">
+						</div>
+						<form name="myForm" action="loadingtohome3.html" onsubmit="return validateForm()" method="post">
 							<input type="text" placeholder="เลขทะเบียนนักศึกษา/ชื่อผู้ใช้" name="username" class="textLogin">
 							<input type="password" placeholder="รหัสผ่าน" name="password" class="textLogin">
-							<button class="btnLogin">เข้าสู่ระบบ</button>
+							<button type="submit" class="btnLogin">เข้าสู่ระบบ</button>
 							<a class="forgetPass" href="#">ลืมรหัสผ่าน?</a>
 						</form>
 					</div>
